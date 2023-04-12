@@ -6,7 +6,7 @@ import seaborn as sns
 #train데이터 생성
 print("dddd")
 
-data_1 = pd.read_table("./Data/Curse-detection-data/dataset.txt",error_bad_lines=False, sep='|')
+data_1 = pd.read_table("DATA/Curse-detection-data/dataset.txt",sep='|')
 
 df_1 = pd.DataFrame(data_1)
 
@@ -15,20 +15,20 @@ df_1['hate'] = df_1['hate'].astype(str)
 df_1['hate'] = df_1['hate'].replace({'0': 'true', '1': 'false'})
 
 data_2 = pd.read_table(
-    "Data/korean-hate-speech/labeled/dev.tsv", error_bad_lines=False)
+    "Data/korean-hate-speech/labeled/dev.tsv")
 
 df_2 = pd.DataFrame(data_2)
 
 df_2 = df_2[['text', 'hate']]
 
 data_3 = pd.read_table(
-    "Data/korean-hate-speech/labeled/train.tsv", error_bad_lines=False)
+    "Data/korean-hate-speech/labeled/train.tsv")
 
 df_3 = pd.DataFrame(data_3)
 
 df_3 = df_3[['text', 'hate']]
 
-data_4 = pd.read_table("Data/nsmc/ratings_train.txt", error_bad_lines=False)
+data_4 = pd.read_table("Data/nsmc/ratings_train.txt")
 
 df_4 = pd.DataFrame(data_4)
 
@@ -54,7 +54,7 @@ df.to_csv("train.csv")
 """
 #test데이터 생성
 """
-data_5 = pd.read_table("Data/nsmc/ratings_test.txt", error_bad_lines=False)
+data_5 = pd.read_table("Data/nsmc/ratings_test.txt")
 
 df_5 = pd.DataFrame(data_5)
 
