@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #train데이터 생성
-"""
+print("dddd")
 
 data_1 = pd.read_table("./Data/Curse-detection-data/dataset.txt",error_bad_lines=False, sep='|')
 
@@ -65,7 +65,7 @@ df_5['hate'] = df_5['hate'].astype(str)
 df_5['hate'] = df_5['hate'].replace({'0': 'true', '1': 'false'})
 
 df_5.to_csv("test.csv")
-"""
+
 
 
 
