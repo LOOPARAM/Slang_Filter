@@ -16,9 +16,11 @@ t_df = t_df[['text', 'hate']]
 t_df['ko_text'] = t_df['text'].str.replace(
     pat=r'[^ ㄱ-ㅣ가-힣]+', repl=r'', regex=True)
 
-noun_extractor = LRNounExtractor()
+a = 0
+for i in t_df['hate']:
+    if i == True:
+        a += 1
+print(f"Hate : {a}")
+print(f"NHate : {164192 - a}")
 
-
-
-
-print(t_df)
+# t_df.to_csv("train2.csv")s
